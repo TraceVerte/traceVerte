@@ -1,0 +1,249 @@
+/* En-tête */
+header {
+    background-color: white; 
+    padding: 10px 20px;
+    position: fixed; /* Rend l'en-tête fixe */
+    top: 0; /* Positionne tout en haut */
+    left: 0;
+    width: 100%; /* Prend toute la largeur */
+    z-index: 1000; /* Assure que l'en-tête reste au-dessus des autres éléments */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère */
+    
+}
+
+/* Conteneur principal de l'en-tête */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo */
+.logo img {
+    display: block;
+}
+/* Nom du site */
+.site-name h1 {
+    margin: 0;
+    font-size: 35px;
+    color: black; 
+    text-align: center;
+    font-family: 'Oswald', Helvetica, Verdana, sans-serif;
+}
+
+/* Barre de recherche */
+.search-bar input {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #004080; /* Changement de couleur au focus */
+    outline: none;
+}
+/* Responsive : adaptation pour petits écrans */
+@media screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .search-bar input {
+        width: 100%; /* Barre de recherche pleine largeur */
+        max-width:300px;
+}
+}
+
+
+/* Style des liens */
+nav {
+  background-color: #f4f4f4; /* Couleur de fond douce */
+   font-family: 'Quicksand', sans-serif;
+  padding: 10px 0; /* Espacement vertical */
+  border-bottom: 2px solid #ccc; /* Ligne en bas pour séparer */
+  text-align: center; /* Centre les éléments */
+    position: fixed; /* Rend la barre de navigation fixe */
+    top: 85px; /* Place la barre de navigation sous l'en-tête (ajustez si nécessaire) */
+    width: 100%;
+    z-index: 999; /* Assure qu'elle reste au-dessus du contenu principal */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Style des liens */
+nav a {
+  text-decoration: none; /* Supprime le soulignement */
+  color: darkgreen; /* Couleur pour le texte */
+  font-size: 20px; /* Taille du texte */
+  margin: 0 15px; /* Espacement horizontal */
+  padding: 5px 10px; /* Espacement interne pour agrandir les zones cliquables */
+  border-radius: 5px; /* Coins arrondis */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Animation fluide */
+}
+/* Style au survol */
+nav a:hover {
+  background-color: forestgreen; /* Couleur de fond survolée */
+  color: #fff; /* Couleur du texte survolé */
+}
+
+
+
+
+
+h1{
+color: darkseagreen ;
+font-family: 'Oswald', Helvetica, Verdana, sans-serif;
+}
+p{
+	color: black;
+	font-family: 'Quicksand', sans-serif;
+}
+
+
+h2,h4{
+	color: seagreen;
+	font-family: 'Oswald', Helvetica, Verdana, sans-serif;
+	font-size: 20px;
+	padding: 0 20px;
+
+}
+h5{
+	color: darkgreen;
+	font-family: 'Oswald', Helvetica, Verdana, sans-serif;
+    font-size: 18px;
+	padding: 0 20px;
+}
+.container{
+	color: forestgreen;
+	font-family: 'Oswald', Helvetica, Verdana, sans-serif;
+	text-align: center;
+	font-size: 25px;
+
+}
+
+.header-image {
+	margin-top: 40px;
+    width: 100%; /* L'image occupe toute la largeur */
+    height: auto;
+    object-fit: cover; /* Coupe l'image pour remplir sans déformation */
+ }
+
+ .taille1{
+ font-size: 20px;
+ max-width: 1200px; /* Largeur maximum pour éviter que le texte ne soit trop étiré */
+    margin: 0 auto; /* Centrer le contenu */
+    padding: 0 20px; /* Espacement intérieur à gauche et à droite */
+      line-height: 2; /* Espacement entre les lignes */
+
+ }
+ .image-container{
+ 	display: flex; /*organise les elements en ligne*/
+ 	flex-wrap: wrap; /*permet de passer a la ligne si necessaire*/
+ 	justify-content: flex-start; /*aligne les elements sur la gauche*/
+ 	gap: 20px; /* ajoute un espace entre les elts*/
+ 	padding: 20px; /*ajoute un espace entre le contenu et le bord de l ecran*/
+ 	max-width: 1200px; /*limite la largeur totale sghr tsawr*/
+ 	margin: 0 auto; /*centrer le conteneur dans la page tsawr lwst*/
+ }
+ /*chaque elt (photo plus titre)*/
+ .item{
+ 	width: 30%; /*3 photos par ligne */
+ 	text-align: center;
+ 	transition: transform 0.3 ease; /*ajouter une animation fluide a l'elt complet*/
+ }
+ .item img{
+ 	width: 100%;  /* image adapté a la largeur du conteneur*/
+ 	height: auto; /*garde le ratio des images*/
+ 	border-radius: 8px; /*coins arrondis pour un meilleur style*/
+ 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /*ajoute une ombre douce*/
+ 	transition: transform 0.3 ease; /*animation fluide pour l agrandissement*/
+ }
+ .item img:hover {
+ 	transform: scale(1.1); /*agrandit l'image de 10pourcent*/
+ }
+ .image-container .item:nth-child(4){
+ 	order: -1;
+ }
+ /* Style général du footer */
+footer {
+    background-color: #000000; /* Fond noir */
+    color: #ffffff; /* Texte en blanc */
+    padding: 20px 0;
+}
+
+/* Conteneur principal du footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+/* Sections du footer */
+.footer-section {
+    flex: 1;
+    text-align: left;
+}
+/* Style des titres */
+.footer-section h3 {
+     color: white;
+    font-family: 'Oswald', Helvetica, Verdana, sans-serif; /* Font Oswald */
+    font-size: 18px; /* Taille plus grande */
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ffffff; /* Ligne blanche sous le titre */
+    padding-bottom: 10px;
+    
+}
+
+/* Liste des éléments dans les sections */
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand', serif; 
+    font-size: 14px; /* Taille normale */
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+/* Style des liens */
+.footer-section ul li a {
+    color: #ffffff; /* Texte blanc */
+    text-decoration: underline; /* Soulignement des liens */
+    transition: color 0.3s ease;
+}
+.footer-section ul li a:hover {
+    color: forestgreen; /* Texte vert forêt au survol */
+}
+
+/* Bas du footer */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #444444; /* Ligne de séparation grise */
+    padding: 10px 0;
+    font-size: 12px;
+    color: #cccccc; /* Texte gris clair */
+    font-family: 'Quicksand', serif; /* Bas de page également en Times New Roman */
+}
+
+/* Responsive : alignement vertical des colonnes sur petit écran */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align:center;
+}
+}
+
+ 
+

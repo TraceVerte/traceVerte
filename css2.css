@@ -1,0 +1,302 @@
+nav {
+  background-color: #f4f4f4; /* Couleur de fond douce */
+  padding: 10px 0; /* Espacement vertical */
+  border-bottom: 2px solid #ccc; /* Ligne en bas pour séparer */
+  text-align: center; /* Centre les éléments */
+    position: fixed; /* Rend la barre de navigation fixe */
+    top: 85px; /* Place la barre de navigation sous l'en-tête (ajustez si nécessaire) */
+    width: 100%;
+    z-index: 999; /* Assure qu'elle reste au-dessus du contenu principal */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Quicksand', Times, serif;
+}
+nav a {
+  text-decoration: none; /* Supprime le soulignement */
+  color: darkgreen; /* Couleur pour le texte */
+  font-size: 20px; /* Taille du texte */
+  margin: 0 15px; /* Espacement horizontal */
+  padding: 5px 10px; /* Espacement interne pour agrandir les zones cliquables */
+  border-radius: 5px; /* Coins arrondis */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Animation fluide */
+}
+/* Style au survol */
+nav a:hover {
+  background-color: forestgreen; /* Couleur de fond survolée */
+  color: #fff; /* Couleur du texte survolé */
+}
+
+/* Réinitialisation des marges et paddings par défaut */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style général du footer */
+footer {
+    background-color: #000000; /* Fond noir */
+    color: #ffffff; /* Texte en blanc */
+    margin: 0; /* Supprime les marges externes */
+    padding: 20px 0; /* Ajoute uniquement du padding interne */
+    width: 100%; /* S'assure que le footer couvre toute la largeur */
+}
+
+/* Conteneur principal du footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto; /* Centrage horizontal */
+    gap: 20px;
+}
+
+/* Sections du footer */
+.footer-section {
+    flex: 1;
+    text-align: left;
+}
+
+/* Style des titres */
+.footer-section h3 {
+    font-family: 'Oswald', Helvetica, Verdana, sans-serif; /* Font Oswald */
+    font-size: 18px; /* Taille plus grande */
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ffffff; /* Ligne blanche sous le titre */
+    padding-bottom: 10px;
+}
+
+/* Liste des éléments dans les sections */
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-family: Quicksand, sans serif; /* Texte en Times New Roman */
+    font-size: 14px; /* Taille normale */
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+/* Style des liens */
+.footer-section ul li a {
+    color: #ffffff; /* Texte blanc */
+    text-decoration: underline; /* Soulignement des liens */
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: forestgreen; /* Texte vert forêt au survol */
+}
+
+/* Bas du footer */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #444444; /* Ligne de séparation grise */
+    padding: 10px 0;
+    font-size: 12px;
+    color: #cccccc; /* Texte gris clair */
+    font-family: 'Quicksand', serif; /* Bas de page également en Times New Roman */
+}
+
+/* Responsive : alignement vertical des colonnes sur petit écran */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+button:hover {
+    background-color: forestgreen;
+}
+
+/* En-tête */
+header {
+    background-color: white; 
+    padding: 10px 20px;
+    position: fixed; /* Rend l'en-tête fixe */
+    top: 0; /* Positionne tout en haut */
+    left: 0;
+    width: 100%; /* Prend toute la largeur */
+    z-index: 1000; /* Assure que l'en-tête reste au-dessus des autres éléments */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère */
+    
+}
+
+/* Conteneur principal de l'en-tête */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo */
+.logo img {
+    display: block;
+}
+
+/* Nom du site */
+.site-name h1 {
+    margin: 0;
+    font-size: 35px;
+    color: black; 
+    text-align: center;
+    font-family: 'Oswald', Helvetica, Verdana, sans-serif;
+}
+
+/* Barre de recherche */
+.search-bar input {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #004080; /* Changement de couleur au focus */
+    outline: none;
+}
+
+/* Responsive : adaptation pour petits écrans */
+@media screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .search-bar input {
+        width: 100%; /* Barre de recherche pleine largeur */
+        max-width: 300px;
+    }
+}
+
+/* contenu du page */
+
+/* Applique la police 'Oswald' uniquement pour les titres spécifiques */
+h2, legend {
+    color: darkseagreen; /* Couleur des titres */
+    font-family: 'Oswald', Helvetica, Verdana, sans-serif;
+}
+
+/* Applique la police 'Quicksand' pour tout le reste */
+body, form, label, input, select, td, input[type="submit"] {
+    font-family: 'Quicksand', serif;
+}
+
+/* Styles généraux pour le formulaire */
+form {
+    max-width: 800px; /* Limite la largeur du formulaire */
+    margin: 20px auto; /* Centre le formulaire */
+    padding: 20px;
+    background-color: #f9f9f9; /* Couleur de fond douce */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+/* Titres principaux */
+h2 {
+    text-align: center; /* Centré */
+    font-size: 24px;
+}
+
+/* Fieldsets et légendes */
+fieldset {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+legend {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+/* Tableaux dans les fieldsets */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+td {
+    padding: 8px 5px;
+    vertical-align: middle;
+}
+
+/* Labels */
+label {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Inputs et sélections */
+input[type="number"], select {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Quicksand', serif; /* Police Times New Roman */
+}
+
+/* Boutons de soumission */
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    font-size: 16px;
+    color: white;
+    background-color: darkseagreen;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Quicksand', serif; /* Police Times New Roman */
+}
+
+input[type="submit"]:hover {
+    background-color: seagreen; /* Couleur plus foncée au survol */
+}
+
+/* Checkbox et labels associés */
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Résultat */
+#result {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: green;
+}
+#advice {
+    color: red; /* Couleur du texte en rouge */
+    font-weight: bold;
+    text-align: center; /* Centrer le texte horizontalement */
+    font-size: 1.2em; /* Ajuste la taille du texte (facultatif) */
+    margin-top: 15px; /* Espace au-dessus de l'élément (facultatif) */
+}
+#advice a {
+    color: red; /* Couleur du lien en rouge */
+    text-decoration: underline; /* Souligne le lien (facultatif) */
+    font-weight: bold; /* Lien également en gras */
+}
+
+/* Applique la police 'Quicksand' pour tout le texte par défaut */
+body, form, label, input, select, td, input[type="submit"] {
+    font-family: 'Quicksand',sans serif;
+}

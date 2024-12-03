@@ -1,0 +1,368 @@
+nav {
+  background-color: #f4f4f4; /* Couleur de fond douce */
+  padding: 10px 0; /* Espacement vertical */
+  border-bottom: 2px solid #ccc; /* Ligne en bas pour séparer */
+  text-align: center; /* Centre les éléments */
+    position: fixed; /* Rend la barre de navigation fixe */
+    top: 85px; /* Place la barre de navigation sous l'en-tête (ajustez si nécessaire) */
+    width: 100%;
+    z-index: 999; /* Assure qu'elle reste au-dessus du contenu principal */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Quicksand',sans serif;
+}
+nav a {
+  text-decoration: none; /* Supprime le soulignement */
+  color: darkgreen; /* Couleur pour le texte */
+  font-size: 20px; /* Taille du texte */
+  margin: 0 15px; /* Espacement horizontal */
+  padding: 5px 10px; /* Espacement interne pour agrandir les zones cliquables */
+  border-radius: 5px; /* Coins arrondis */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Animation fluide */
+}
+/* Style au survol */
+nav a:hover {
+  background-color: forestgreen; /* Couleur de fond survolée */
+  color: #fff; /* Couleur du texte survolé */
+}
+
+/* Réinitialisation des marges et paddings par défaut */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style général du footer */
+footer {
+    background-color: #000000; /* Fond noir */
+    color: #ffffff; /* Texte en blanc */
+    margin: 0; /* Supprime les marges externes */
+    padding: 20px 0; /* Ajoute uniquement du padding interne */
+    width: 100%; /* S'assure que le footer couvre toute la largeur */
+}
+
+/* Conteneur principal du footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto; /* Centrage horizontal */
+    gap: 20px;
+}
+
+/* Sections du footer */
+.footer-section {
+    flex: 1;
+    text-align: left;
+}
+
+/* Style des titres */
+.footer-section h3 {
+    font-family: 'Oswald', Helvetica, Verdana, sans-serif; /* Font Oswald */
+    font-size: 18px; /* Taille plus grande */
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ffffff; /* Ligne blanche sous le titre */
+    padding-bottom: 10px;
+}
+
+/* Liste des éléments dans les sections */
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand', serif; /* Texte en Times New Roman */
+    font-size: 14px; /* Taille normale */
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+/* Style des liens */
+.footer-section ul li a {
+    color: #ffffff; /* Texte blanc */
+    text-decoration: underline; /* Soulignement des liens */
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: forestgreen; /* Texte vert forêt au survol */
+}
+
+/* Bas du footer */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #444444; /* Ligne de séparation grise */
+    padding: 10px 0;
+    font-size: 12px;
+    color: #cccccc; /* Texte gris clair */
+    font-family: 'Quicksand', serif; /* Bas de page également en Times New Roman */
+}
+
+/* Responsive : alignement vertical des colonnes sur petit écran */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+button:hover {
+    background-color: forestgreen;
+}
+
+/* En-tête */
+header {
+    background-color: white; 
+    padding: 10px 20px;
+    position: fixed; /* Rend l'en-tête fixe */
+    top: 0; /* Positionne tout en haut */
+    left: 0;
+    width: 100%; /* Prend toute la largeur */
+    z-index: 1000; /* Assure que l'en-tête reste au-dessus des autres éléments */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère */
+    
+}
+
+/* Conteneur principal de l'en-tête */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo */
+.logo img {
+    display: block;
+}
+
+/* Nom du site */
+.site-name h1 {
+    margin: 0;
+    font-size: 35px;
+    color: black; 
+    text-align: center;
+    font-family: 'Oswald', Helvetica, Verdana, sans-serif;
+}
+
+/* Barre de recherche */
+.search-bar input {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    transition: border-color 0.3s ease;
+    
+}
+
+.search-bar input:focus {
+    border-color: #004080; /* Changement de couleur au focus */
+    outline: none;
+    
+}
+
+/* Responsive : adaptation pour petits écrans */
+@media screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .search-bar input {
+        width: 100%; /* Barre de recherche pleine largeur */
+        max-width: 300px;
+        
+    }
+}
+
+/* Style général */
+body {
+    font-family: 'Quicksand', serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Section générale */
+section {
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Titres principaux */
+h2, legend {
+    color: darkseagreen ;
+    font-family: 'Oswald', Helvetica, Verdana, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Texte spécifique avec taille agrandie */
+section#dons > p:first-of-type {
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style pour "Merci pour votre générosité !" sans ligne en dessous */
+section#dons > p > h2 {
+    font-family: 'Quicksand', serif;
+    color: green;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px 0 0;
+    text-align: center;
+}
+
+/* Paragraphes restants */
+p {
+    font-family: 'Quicksand', serif;
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Bouton de donation personnalisé */
+#donation-button {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Quicksand', sans serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#donation-button:hover {
+    background-color: #219150;
+}
+/* Boutons de donation */
+.donation-amounts button {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    font-family: 'Quicksand', sans serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.donation-amounts button:hover {
+    background-color: #219150;
+}
+
+/* Formulaire */
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form label {
+    font-weight: bold;
+    color: #2c3e50;
+    font-family: 'Quicksand',sans serif;
+    width: 25%; /* Assurez-vous que le label et le champ sont bien alignés */
+}
+
+form input, form select {
+    width: 70%; /* Ajuster la largeur des champs */
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Quicksand', sans serif;
+}
+
+form input[type="radio"] {
+    width: auto;
+}
+
+/* Bouton de soumission */
+button[type="submit"] {
+    background-color: #16a085;
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-family: 'Quicksand', sans serif;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #13876b;
+}
+
+/* Lignes de séparation */
+hr {
+    margin: 30px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/* Dernière section (Besoin d'aide) */
+section:last-child {
+    text-align: center;
+}
+
+section:last-child p {
+    margin: 5px 0;
+    font-size: 16px;
+    font-family: 'Quicksand', sans serif;
+}
+
+/* Applique la police Times New Roman pour tout le reste */
+input {
+    font-family: 'Quicksand',sans serif;
+}
+/* Centrer le texte du copyright */
+.footer-bottom .copyright {
+    text-align: center;
+    font-size: 12px;
+    color: #cccccc;
+    font-family: 'Quicksand', sans serif;
+    margin: 0; /* Supprime les marges */
+}
+
+
+

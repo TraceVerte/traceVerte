@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez comment réduire votre empreinte carbone avec TraceVerte. Conseils, boutique et dons pour un avenir durable.">
+    <meta name="keywords" content="écologie, empreinte carbone, avenir durable, boutique écologique">
+    <meta name="author" content="TraceVerte">
+    <title>TraceVerte - Pour un avenir durable</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css2.css"/>
+    <script src="cookies.js"></script>
+</head>
+<body>
+   <div id="cookie-banner" style="position: fixed; top: 80px; left: 50%; transform: translateX(-50%); background: #222; color: white; width: 90%; max-width: 900px; padding: 20px; text-align: center; border-radius: 10px 10px 0 0; z-index: 1000;">
+    Ce site utilise des cookies pour améliorer votre expérience. 
+    <button onclick="acceptCookies()">Accepter</button>
+    </div>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo_site1.jpg" alt="Logo du site" width="70" height="70">
+            </div>
+            <div class="site-name">
+                <h1>TraceVerte</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher...">
+            </div>
+        </div>
+    </header>
+
+    <hr>
+
+    <nav style="text-align: center;">
+        <a href="index.html">Accueil</a> |
+        <a href="page_calcul3.html">Calculateur d'Empreinte</a> |
+        <a href="#conseils">Conseils</a> |
+        <a href="#boutique">Boutique</a> |
+        <a href="page_dons3.html">Dons</a>
+    </nav>
+
+    <br><br><br><br><br><br>
+
+<section>
+    <form id="empreinteForm">
+        <h2>Veuillez remplir les informations suivantes :</h2>
+
+        <fieldset>
+            <legend>Moyens de transport utilisés par semaine :</legend>
+            <table>
+                <tr>
+                    <td><label for="pied">À pied (heures/semaine) :</label></td>
+                    <td><input type="number" id="pied" name="pied" required></td>
+                </tr>
+                <tr>
+                    <td><label for="voiture">Voiture (heures/semaine) :</label></td>
+                    <td><input type="number" id="voiture" name="voiture" required></td>
+                </tr>
+                <tr>
+                    <td><label for="bus">Bus (heures/semaine) :</label></td>
+                    <td><input type="number" id="bus" name="bus" required></td>
+                </tr>
+                <tr>
+                    <td><label for="avion">Avion (heures/semaine) :</label></td>
+                    <td><input type="number" id="avion" name="avion" required></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Alimentation :</legend>
+            <table>
+                <tr>
+                    <td><label for="alimentation">Choisissez votre type d'alimentation :</label></td>
+                    <td>
+                        <select id="alimentation" name="alimentation" required>
+                            <option value="vegetarien">Végétarien</option>
+                            <option value="vegetalien">Végétalien</option>
+                            <option value="omnivore">Omnivore</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Appareils électroniques :</legend>
+            <table>
+                <tr>
+                    <td><label><input type="checkbox" id="telephone"> Téléphone (heures/jour) :</label></td>
+                    <td><input type="number" id="telephoneHours" placeholder="heures" min="0"></td>
+                </tr>
+                <tr>
+                    <td><label><input type="checkbox" id="tablette"> Tablette (heures/jour) :</label></td>
+                    <td><input type="number" id="tabletteHours" placeholder="heures" min="0"></td>
+                </tr>
+                <tr>
+                    <td><label><input type="checkbox" id="pcPortable"> PC Portable (heures/jour) :</label></td>
+                    <td><input type="number" id="pcPortableHours" placeholder="heures" min="0"></td>
+                </tr>
+                <tr>
+                    <td><label><input type="checkbox" id="pcBureau"> PC Bureau (heures/jour) :</label></td>
+                    <td><input type="number" id="pcBureauHours" placeholder="heures" min="0"></td>
+                </tr>
+                <tr>
+                    <td><label><input type="checkbox" id="tv"> TV (heures/jour) :</label></td>
+                    <td><input type="number" id="tvHours" placeholder="heures" min="0"></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Déchets produits :</legend>
+            <table>
+                <tr>
+                    <td><label for="dechets">Déchets produits par semaine (en kg) :</label></td>
+                    <td><input type="number" id="dechets" name="dechets" required></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <input type="submit" value="Calculer l'Empreinte Écologique">
+    </form>
+
+    <h3 id="result" style="margin-top: 20px; color: green;"></h3>
+    <div id="advice" ></div>
+</section>
+
+<script>
+    document.getElementById("empreinteForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const pied = parseFloat(document.getElementById("pied").value) || 0;
+        const voiture = parseFloat(document.getElementById("voiture").value) || 0;
+        const bus = parseFloat(document.getElementById("bus").value) || 0;
+        const avion = parseFloat(document.getElementById("avion").value) || 0;
+        const dechets = parseFloat(document.getElementById("dechets").value) || 0;
+        const alimentation = document.getElementById("alimentation").value;
+
+        const telephoneHours = document.getElementById("telephone").checked ? parseFloat(document.getElementById("telephoneHours").value) || 0 : 0;
+        const tabletteHours = document.getElementById("tablette").checked ? parseFloat(document.getElementById("tabletteHours").value) || 0 : 0;
+        const pcPortableHours = document.getElementById("pcPortable").checked ? parseFloat(document.getElementById("pcPortableHours").value) || 0 : 0;
+        const pcBureauHours = document.getElementById("pcBureau").checked ? parseFloat(document.getElementById("pcBureauHours").value) || 0 : 0;
+        const tvHours = document.getElementById("tv").checked ? parseFloat(document.getElementById("tvHours").value) || 0 : 0;
+
+        let empreinte = 0;
+
+        empreinte += voiture * 2.3;
+        empreinte += bus * 1.0;
+        empreinte += avion * 5.0;
+        empreinte += dechets * 0.5;
+
+        switch (alimentation) {
+            case "vegetarien":
+                empreinte += 1.5;
+                break;
+            case "vegetalien":
+                empreinte += 1.0;
+                break;
+            case "omnivore":
+                empreinte += 2.5;
+                break;
+        }
+
+        empreinte += telephoneHours * 0.02;
+        empreinte += tabletteHours * 0.03;
+        empreinte += pcPortableHours * 0.05;
+        empreinte += pcBureauHours * 0.06;
+        empreinte += tvHours * 0.04;
+
+        document.getElementById("result").innerText = `Votre empreinte écologique est estimée à ${empreinte.toFixed(2)} kg CO₂/semaine.`;
+
+        const adviceDiv = document.getElementById("advice");
+        adviceDiv.innerHTML = `Pour savoir comment diminuer votre empreinte, <a href="page_conseils.html">cliquez ici</a>.`;
+    });
+</script>
+
+
+<footer>
+    <div class="footer-container" style="display: flex; justify-content: space-between; ">
+
+        <div class="footer-section" style="text-align: left;">
+            <h3>Liens rapides</h3>
+            <ul>
+                
+                <li><a href="index.html">Accueil</a> </li>
+                <li><a href="page_calcul3.html">Calculateur d'Empreinte</a> </li>
+                <li><a href="pagedeconseil.html">Conseils</a></li>
+                <li><a href="pagedeboutique.html">Boutique</a> </li>
+                <li><a href="page_dons3.html">Dons</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section" style="text-align: left;">
+            <h3>Suivez-nous</h3>
+            <ul>
+                <li><a href="https://facebook.com">Facebook</a></li>
+                <li><a href="https://twitter.com">Twitter</a></li>
+                <li><a href="https://instagram.com">Instagram</a></li>
+                <li><a href="https://linkedin.com">LinkedIn</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section" style="text-align: left;">
+            <h3>Contact</h3>
+            <ul>
+            <li>Email : contact@TraceVerte.com</li>
+            <li>Téléphone : +212 6 96 03 00 00</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom" style="text-align: center; padding: 10px;">
+        <p>&copy; 2024 TraceVerte. Tous droits réservés.</p>
+    </div>
+</footer>
+
+</body>
+</html>

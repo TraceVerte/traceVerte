@@ -1,0 +1,157 @@
+
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Dons</title>
+</head>
+<body>
+    
+    <header>
+        <table style="width: 100%;">
+            <tr>
+                <td><img src="logo_projet1.jpg" alt="Logo du site" width="70" height="70"></td>
+                <td style="text-align: center;"><h1 style="margin: 0;">TraceVerte</h1></td>
+                <td style="text-align: right;"><input type="text" placeholder="Rechercher..."></td>
+            </tr>
+        </table>
+    </header>
+
+    <hr>
+
+    <nav style="text-align: center;">
+        <a href="pageAcceuil.html">Accueil</a> |
+        <a href="page_calcul3.html">Calculateur d'Empreinte</a> |
+        <a href="pagedeconseil.html">Conseils</a> |
+        <a href="pagedeboutique.html">Boutique</a> |
+        <a href="page_dons3.html">Dons</a>
+    </nav>
+    
+    <br><br>
+    
+    <section id="dons" style="text-align: center;">
+       
+ <h2>Faire un Don</h2>
+        <p>Votre soutien est précieux pour nous aider à promouvoir des pratiques durables et à réduire notre empreinte écologique.</p>
+       
+        <h3>Choisissez votre montant</h3>
+        <div class="donation-amounts">
+            <button type="button" onclick="document.getElementById('amount').value='10'">10DHs</button>
+            <button type="button" onclick="document.getElementById('amount').value='20'">20DHs</button>
+            <button type="button" onclick="document.getElementById('amount').value='50'">50DHs</button>
+            <button type="button" onclick="document.getElementById('amount').value='100'">100DHs</button>
+            <button type="button" onclick="document.getElementById('amount').value=''">Autre montant</button>
+        </div>
+<fieldset>
+    <legend><h2>Formulaire de don</h2></legend>
+
+    <form action="traitement.php" method="post">
+        <table>
+            <tr>
+            <td><label for="amount">Montant du don :</label></td>
+            <td><input type="number" id="amount" name="amount" placeholder="Entrer un montant en Dirhams" required size="60"></td>
+            </tr>
+            <tr>
+                <td><label for="nom">Nom :</label></td>
+                <td><input type="text" id="nom" name="nom" placeholder="votre nom" required size="60"></td>
+            </tr>
+
+            <tr>
+                <td><label for="prenom">Prénom :</label></td>
+                <td><input type="text" id="prenom" name="prenom" placeholder="votre prénom" required size="60"></td>
+            </tr>
+
+            <tr>
+                <td><label for="date">Date de naissance :</label></td>
+                <td><input type="date" id="date" name="date_naissance" required ></td>
+            </tr>
+
+            <tr>
+                <td><label for="email">Mail :</label></td>
+                <td><input type="email" id="email" name="email" placeholder="votre mail" required size="60"></td>
+            </tr>
+
+
+            <tr>
+                <td>Homme :</td>
+                <td><input type="radio" id="homme" name="sexe" value="homme"></td>
+            </tr>
+            <tr>
+                <td>Femme :</td>
+                <td><input type="radio" id="femme" name="sexe" value="femme"></td>
+            </tr>
+
+            <tr>
+                <td><label for="pays">Votre pays :</label></td>
+                <td>
+                    <select id="pays" name="pays" required>
+                        <option value="">Sélectionnez un pays</option>
+                        <option value="france">France</option>
+                        <option value="maroc">Maroc</option>
+                        <option value="espagne">Espagne</option>
+                    </select>
+                </td>
+            </tr>
+           <tr>
+           <td><label for="payment">Méthode de paiement :</label></td>
+           <td>
+            <select id="payment" name="payment" required>
+                <option value="carte">Carte de Crédit</option>
+                <option value="paypal">PayPal</option>
+                <option value="virement">Virement Bancaire</option>
+            </select>
+            </td>
+          </tr>
+        </table>
+       <button type="submit">Faire un Don</button>
+    </form>
+  </fieldset>
+        <p><h2 style="color: green;">Merci pour votre générosité !</h2></p>
+    </section>
+    
+    <hr>
+
+    <section>
+        <h2>Besoin d'aide ?</h2>
+        <p>Si vous avez des questions ou besoin d'assistance, contactez-nous à :</p>
+        <p>Email :contact@TraceVerte.com</p>
+        <p>Téléphone : +212 6 96 03 00 00 </p>
+    </section>
+
+    <hr>
+<footer>
+    <div class="footer-container" style="display: flex; justify-content: space-between; ">
+
+        <div class="footer-section" style="text-align: left;">
+            <h3>Liens rapides</h3>
+            <ul>
+                <li><a href="pageAcceuil.html">Accueil</a> </li>
+                <li><a href="page_calcul3.html">Calculateur d'Empreinte</a> </li>
+                <li><a href="pagedeconseil.html">Conseils</a></li>
+                <li><a href="pagedeboutique.html">Boutique</a> </li>
+                <li><a href="page_dons3.html">Dons</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section" style="text-align: center;">
+            <h3>Suivez-nous</h3>
+            <ul>
+                <li><a href="https://facebook.com">Facebook</a></li>
+                <li><a href="https://twitter.com">Twitter</a></li>
+                <li><a href="https://instagram.com">Instagram</a></li>
+                <li><a href="https://linkedin.com">LinkedIn</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section" style="text-align: center;">
+            <h3>Contact</h3>
+            <p>Email : contact@TraceVerte.com</p>
+            <p>Téléphone : +212 6 96 03 72 08</p>
+        </div>
+    </div>
+    <div class="footer-bottom" style="text-align: center; padding: 10px;">
+        <p>&copy; 2024 TraceVerte. Tous droits réservés.</p>
+    </div>
+</footer>
+</body>
+</html>
